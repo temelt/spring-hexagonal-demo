@@ -1,0 +1,10 @@
+server:
+  port: 8300
+
+
+spring:
+  application:
+    name: employee-service
+  data:
+    mongodb:
+      database: employee

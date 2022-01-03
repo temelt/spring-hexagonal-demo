@@ -1,0 +1,10 @@
+server:
+  port: 8200
+
+
+spring:
+  application:
+    name: inventory-service
+  data:
+    mongodb:
+      database: inventory
