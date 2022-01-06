@@ -11,6 +11,7 @@
 
     <groupId>com.temelt.inventory</groupId>
     <artifactId>inventory-domain</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
