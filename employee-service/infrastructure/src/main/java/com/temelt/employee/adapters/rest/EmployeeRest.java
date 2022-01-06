@@ -3,6 +3,7 @@ package com.temelt.employee.adapters.rest;
 import com.temelt.common.ScenarioProcessor;
 import com.temelt.employee.model.CreateEmployeeRequest;
 import com.temelt.employee.model.Employee;
+import com.temelt.employee.model.SearchEmployeeRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("employee")
 @RequiredArgsConstructor
 public class EmployeeRest {
+    private final ScenarioProcessor<Employee, SearchEmployeeRequest> employeeSearchProcessor;
     private final ScenarioProcessor<Employee, CreateEmployeeRequest> createEmployeeRequestProcessor;
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployee(@PathVariable String id) {
-        return ResponseEntity.ok(new Employee(id));
+        var result = employeeSearchProcessor.process(new SearchEmployeeRequest(id));
+        return ResponseEntity.ok(result);
     }
 
     @PostMapping
