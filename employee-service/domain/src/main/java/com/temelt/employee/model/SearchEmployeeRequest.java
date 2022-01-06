@@ -1,9 +1,16 @@
 package com.temelt.employee.model;
 
 import com.temelt.common.Scenario;
-import lombok.Value;
+import javax.validation.constraints.NotNull;
 
-@Value
 public class SearchEmployeeRequest implements Scenario {
-    String id;
+    private String id;
+
+    public SearchEmployeeRequest(@NotNull final String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
 }

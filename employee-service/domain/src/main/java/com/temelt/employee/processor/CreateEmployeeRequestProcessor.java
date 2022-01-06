@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Processor
 @RequiredArgsConstructor
-public class CreateEmployeeRequestProcessor implements ScenarioProcessor<Employee, CreateEmployeeRequest> {
+class CreateEmployeeRequestProcessor implements ScenarioProcessor<Employee, CreateEmployeeRequest> {
     private final EmployeePort employeePort;
 
     @Override

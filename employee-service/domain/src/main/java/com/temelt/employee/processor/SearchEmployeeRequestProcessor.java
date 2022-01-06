@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 @Processor
 @RequiredArgsConstructor
-public class SearchEmployeeRequestProcessor implements ScenarioProcessor<Employee, SearchEmployeeRequest> {
+class SearchEmployeeRequestProcessor implements ScenarioProcessor<Employee, SearchEmployeeRequest> {
 
     private final EmployeePort employeePort;
 
