@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo
+    profiles:
+      - dev
+    ports:
+      - "27017:27017"
