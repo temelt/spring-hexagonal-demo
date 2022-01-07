@@ -37,4 +37,6 @@ public class InventoryApi {
         var result = createInventoryProcessor.process(request.toModel());
         return ResponseEntity.ok(result);
     }
+
+
 }

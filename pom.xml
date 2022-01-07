@@ -8,6 +8,7 @@
 		<module>employee-service</module>
 		<module>inventory-service</module>
         <module>common</module>
+        <module>order-service</module>
     </modules>
 
 	<parent>
