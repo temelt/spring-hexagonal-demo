@@ -19,5 +19,5 @@ public interface OrderPort {
 
     Order returnOrder(ReturnOrderRequest request);
 
-    Boolean isOrderAlreadyPlaced(CreateOrderRequest item);
+    boolean isOrderAlreadyPlaced(CreateOrderRequest item);
 }
