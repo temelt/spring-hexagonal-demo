@@ -1,4 +1,4 @@
-package com.temel.inventory.adapters.rest.dto;
+package com.temelt.inventory.adapters.rest.dto;
 
 import com.temelt.inventory.model.CreateInventoryRequest;
 import lombok.AllArgsConstructor;

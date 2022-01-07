@@ -1,4 +1,4 @@
-package com.temel.inventory.adapters.data.db;
+package com.temelt.inventory.adapters.data.db;
 
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
 @Data
+@Document("inventory")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode

@@ -1,6 +1,6 @@
-package com.temel.inventory.adapters.rest;
+package com.temelt.inventory.adapters.rest;
 
-import com.temel.inventory.adapters.rest.dto.CreateInventoryDto;
+import com.temelt.inventory.adapters.rest.dto.CreateInventoryDto;
 import com.temelt.common.ScenarioProcessor;
 import com.temelt.inventory.model.CreateInventoryRequest;
 import com.temelt.inventory.model.GetInventoryByIdRequest;

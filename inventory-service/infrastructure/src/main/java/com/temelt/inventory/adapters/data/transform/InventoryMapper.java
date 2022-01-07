@@ -1,6 +1,6 @@
-package com.temel.inventory.adapters.data.transform;
+package com.temelt.inventory.adapters.data.transform;
 
-import com.temel.inventory.adapters.data.db.InventoryDocument;
+import com.temelt.inventory.adapters.data.db.InventoryDocument;
 import com.temelt.inventory.model.Inventory;
 import java.util.List;
 import org.springframework.stereotype.Component;
