@@ -1,4 +1,4 @@
-package com.temel.inventory.configuration;
+package com.temelt.inventory.configuration;
 
 import com.temelt.provider.TimeProvider;
 import org.springframework.context.annotation.Bean;

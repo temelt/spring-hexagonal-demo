@@ -1,10 +1,10 @@
-package com.temelt.employee.adapters.rest;
+package com.temelt.inventory.adapters.rest;
 
+import com.temelt.inventory.adapters.rest.dto.CreateInventoryDto;
 import com.temelt.common.ScenarioProcessor;
-import com.temelt.employee.adapters.rest.dto.CreateEmployeeDto;
-import com.temelt.employee.model.CreateEmployeeRequest;
-import com.temelt.employee.model.Employee;
-import com.temelt.employee.model.SearchEmployeeRequest;
+import com.temelt.inventory.model.CreateInventoryRequest;
+import com.temelt.inventory.model.GetInventoryByIdRequest;
+import com.temelt.inventory.model.Inventory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,23 +17,26 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("employee")
+@RequestMapping("inventory")
 @RequiredArgsConstructor
-public class EmployeeRest {
-    private final ScenarioProcessor<Employee, SearchEmployeeRequest> employeeSearchProcessor;
-    private final ScenarioProcessor<Employee, CreateEmployeeRequest> createEmployeeProcessor;
+public class InventoryApi {
+
+    private final ScenarioProcessor<Inventory, GetInventoryByIdRequest> inventoryByIdProcessor;
+    private final ScenarioProcessor<Inventory, CreateInventoryRequest> createInventoryProcessor;
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<Employee> getEmployee(@PathVariable String id) {
-        var result = employeeSearchProcessor.process(new SearchEmployeeRequest(id));
+    public ResponseEntity<Inventory> getInventory(@PathVariable String id) {
+        var result = inventoryByIdProcessor.process(new GetInventoryByIdRequest(id));
         return ResponseEntity.ok(result);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Employee> createEmployee(@RequestBody CreateEmployeeDto request) {
-        var result = createEmployeeProcessor.process(request.toModel());
+    public ResponseEntity<Inventory> create(@RequestBody CreateInventoryDto request) {
+        var result = createInventoryProcessor.process(request.toModel());
         return ResponseEntity.ok(result);
     }
+
+
 }

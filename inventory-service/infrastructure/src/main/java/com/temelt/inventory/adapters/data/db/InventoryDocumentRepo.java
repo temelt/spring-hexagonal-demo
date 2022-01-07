@@ -1,4 +1,4 @@
-package com.temel.inventory.adapters.data.db;
+package com.temelt.inventory.adapters.data.db;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

@@ -1,4 +1,4 @@
-package com.temel.inventory;
+package com.temelt.inventory;
 
 import com.temelt.Processor;
 import org.springframework.boot.SpringApplication;

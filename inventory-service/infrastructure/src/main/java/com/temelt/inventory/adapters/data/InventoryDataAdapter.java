@@ -1,8 +1,8 @@
-package com.temel.inventory.adapters.data;
+package com.temelt.inventory.adapters.data;
 
-import com.temel.inventory.adapters.data.db.InventoryDocument;
-import com.temel.inventory.adapters.data.db.InventoryDocumentRepo;
-import com.temel.inventory.adapters.data.transform.InventoryMapper;
+import com.temelt.inventory.adapters.data.db.InventoryDocument;
+import com.temelt.inventory.adapters.data.db.InventoryDocumentRepo;
+import com.temelt.inventory.adapters.data.transform.InventoryMapper;
 import com.temelt.inventory.model.CreateInventoryRequest;
 import com.temelt.inventory.model.Inventory;
 import com.temelt.inventory.port.InventoryPort;
