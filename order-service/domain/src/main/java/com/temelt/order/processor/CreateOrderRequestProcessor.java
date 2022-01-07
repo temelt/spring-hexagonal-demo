@@ -37,8 +37,8 @@ class CreateOrderRequestProcessor implements ScenarioProcessor<Order, CreateOrde
                 log.debug("Order is already in progress/placed [{}]:[{}]", item.getInventoryId(), item.getEmployeeId());
                 throw new BusinessException("order.is.already.placed");
             }
-        } catch (BusinessException e) {
-            throw e;
+        } catch (BusinessException be) {
+            throw be;
         } catch (Exception e) {
             log.error("Integration error!", e);
             throw e;
