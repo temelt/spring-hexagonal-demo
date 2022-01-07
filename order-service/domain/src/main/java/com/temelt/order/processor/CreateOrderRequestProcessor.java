@@ -24,18 +24,25 @@ class CreateOrderRequestProcessor implements ScenarioProcessor<Order, CreateOrde
 
     @Override
     public Order process(CreateOrderRequest item) {
-        if (!employeePort.validateEmployeeAllowance(item.getEmployeeId())) {
-            throw new InventoryNotAllowedException("inventory.not.allowed.for.employee");
+        try {
+            if (!employeePort.validateEmployeeAllowance(item.getEmployeeId())) {
+                log.debug("Employee [{}] not allowed for inventory [{}]", item.getEmployeeId(), item.getInventoryId());
+                throw new InventoryNotAllowedException("inventory.not.allowed.for.employee");
+            }
+            if (!inventoryPort.inStock(item.getInventoryId())) {
+                log.debug("Inventory is not in stock [{}]", item.getInventoryId());
+                throw new InventoryNotPresentException("inventory.not.in.stock");
+            }
+            if (orderPort.isOrderAlreadyPlaced(item)) {
+                log.debug("Order is already in progress/placed [{}]:[{}]", item.getInventoryId(), item.getEmployeeId());
+                throw new BusinessException("order.is.already.placed");
+            }
+        } catch (BusinessException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("Integration error!", e);
+            throw e;
         }
-
-        if (!inventoryPort.inStock(item.getInventoryId())) {
-            throw new InventoryNotPresentException("inventory.not.in.stock");
-        }
-
-        if (orderPort.isOrderAlreadyPlaced(item)) {
-            throw new BusinessException("order.is.already.placed");
-        }
-
         return orderPort.createOrder(item);
     }
 }
