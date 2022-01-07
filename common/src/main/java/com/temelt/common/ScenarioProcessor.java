@@ -1,6 +1,6 @@
 package com.temelt.common;
 
-public interface ScenarioProcessor <E, T extends Scenario>{
+public interface ScenarioProcessor <M, S extends Scenario>{
 
-    E process(T item);
+    M process(S item);
 }
