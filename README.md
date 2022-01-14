@@ -1,6 +1,14 @@
 # spring-hexagonal-demo
 Hexagonal Architecture + DDD + Java example with SpringBoot 2.7
 
+![Build](https://github.com/temelt/spring-hexagonal-demo/actions/workflows/build.yml/badge.svg)
+![Tests](https://github.com/temelt/spring-hexagonal-demo/actions/workflows/maven.yml/badge.svg)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=temelt_spring-hexagonal-demo&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=temelt_spring-hexagonal-demo)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=temelt_spring-hexagonal-demo&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=temelt_spring-hexagonal-demo)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=temelt_spring-hexagonal-demo&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=temelt_spring-hexagonal-demo)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=temelt_spring-hexagonal-demo&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=temelt_spring-hexagonal-demo)
+
+
 # Getting Started
 
 ### Reference Documentation
