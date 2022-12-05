@@ -1,5 +1,5 @@
 # spring-hexagonal-demo
-Hexagonal Architecture + DDD + Java example with SpringBoot 2.7
+Hexagonal Architecture + DDD + Java example with SpringBoot 3.0.0
 
 ![Build](https://github.com/temelt/spring-hexagonal-demo/actions/workflows/build.yml/badge.svg)
 ![Tests](https://github.com/temelt/spring-hexagonal-demo/actions/workflows/maven.yml/badge.svg)
